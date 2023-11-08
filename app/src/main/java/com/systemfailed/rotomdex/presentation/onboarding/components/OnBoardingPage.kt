@@ -15,6 +15,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.systemfailed.rotomdex.R
@@ -37,18 +38,20 @@ fun OnBoardingPage(
             contentDescription = null,
             contentScale = ContentScale.FillBounds
         )
-        Spacer(modifier = Modifier.height(24.dp))
+        Spacer(modifier = Modifier.height(10.dp))
         Text(
             text = page.title,
             modifier = Modifier.padding(horizontal = 30.dp),
             style = MaterialTheme.typography.displaySmall.copy(fontWeight = FontWeight.Bold),
-            color = colorResource(id = R.color.black)
+            color = colorResource(id = R.color.black),
+            textAlign = TextAlign.Center
         )
         Text(
             text = page.description,
             modifier = Modifier.padding(horizontal = 30.dp),
             style = MaterialTheme.typography.bodyMedium,
-            color = colorResource(id = R.color.black)
+            color = colorResource(id = R.color.black),
+            textAlign = TextAlign.Center
         )
     }
 }
