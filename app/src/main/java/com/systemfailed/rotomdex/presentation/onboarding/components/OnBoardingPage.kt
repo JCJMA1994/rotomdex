@@ -10,14 +10,17 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.systemfailed.rotomdex.R
 import com.systemfailed.rotomdex.presentation.onboarding.Page
 import com.systemfailed.rotomdex.presentation.onboarding.pages
@@ -28,28 +31,40 @@ fun OnBoardingPage(
     page: Page
 ) {
     Column(
-        modifier = modifier
+        modifier = modifier,
     ) {
         Image(
             modifier = Modifier
                 .fillMaxWidth()
-                .fillMaxHeight(0.6f),
+                .fillMaxHeight(0.5f)
+                .align(Alignment.CenterHorizontally),
             painter = painterResource(id = page.image),
             contentDescription = null,
-            contentScale = ContentScale.FillBounds
+            contentScale = ContentScale.Fit,
         )
-        Spacer(modifier = Modifier.height(10.dp))
+        Spacer(modifier = Modifier.height(0.5.dp))
+
         Text(
             text = page.title,
             modifier = Modifier.padding(horizontal = 30.dp),
-            style = MaterialTheme.typography.displaySmall.copy(fontWeight = FontWeight.Bold),
+            style = MaterialTheme.typography.titleLarge.copy(
+                fontFamily = FontFamily.SansSerif,
+                fontSize = 30.sp,
+                fontWeight = FontWeight.Bold
+            ),
             color = colorResource(id = R.color.black),
             textAlign = TextAlign.Center
         )
+
+        Spacer(modifier = Modifier.height(15.dp))
+
         Text(
             text = page.description,
             modifier = Modifier.padding(horizontal = 30.dp),
-            style = MaterialTheme.typography.bodyMedium,
+            style = MaterialTheme.typography.titleMedium.copy(
+                fontFamily = FontFamily.Serif,
+                fontSize = 14.sp,
+            ),
             color = colorResource(id = R.color.black),
             textAlign = TextAlign.Center
         )
@@ -59,5 +74,5 @@ fun OnBoardingPage(
 @Preview(showBackground = true)
 @Composable
 fun OnBoardingPagePreview() {
-    OnBoardingPage(page = pages[2])
+    OnBoardingPage(page = pages[0])
 }
