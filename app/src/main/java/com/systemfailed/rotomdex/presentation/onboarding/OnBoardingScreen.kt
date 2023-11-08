@@ -41,8 +41,8 @@ fun OnBoardingScreen() {
             derivedStateOf {
                 when (pagerState.currentPage) {
                     0 -> listOf("", "Continuar")
-                    1 -> listOf("Back", "Vamos começar!")
-                    2 -> listOf("Criar conta", "Ja tenho uma conta")
+                    1 -> listOf("Back", "Vamos a comenzar!")
+                    2 -> listOf("Crear cuenta", "Ya tengo cuenta")
                     else -> listOf("", "")
                 }
             }

@@ -11,20 +11,18 @@ data class Page(
 
 val pages = listOf(
     Page(
-        title = "Todos os Pokémons em um só Lugar",
-        description = "Acesse uma vasta lista de Pokémon de \n" +
-                "todas as gerações já feitas pela Nintendo",
+        title = "Todos los Pokemon en un solo lugar",
+        description = "Accede a una amplia lista de Pokemon de todas las generaciones creada por Nintendo",
         image = R.drawable.ash_johto
     ),
     Page(
-        title = "Mantenha sua Pokédex atualizada",
-        description = "Cadastre-se e mantenha seu perfil, \n" +
-                "pokémon favoritos, configurações e muito mais, salvos no aplicativo, mesmo sem conexão com a internet.",
+        title = "Mantén tu Pokédex actualizada",
+        description = "Regístrate y mantén tu perfil, Pokemon favoritos, configuraciones y mucho más guardados en la aplicación, incluso sin conexión a Internet.",
         image = R.drawable.dawn
     ),
     Page(
-        title = "Está pronto para essa aventura?",
-        description = "Basta criar uma conta e começar a explorar o mundo dos Pokémon hoje!",
+        title = "¿Estás listo para esta aventura?",
+        description = "¡Simplemente crea una cuenta y comienza a explorar el mundo de Pokemon hoy!",
         image = R.drawable.interviewers
     )
 )
