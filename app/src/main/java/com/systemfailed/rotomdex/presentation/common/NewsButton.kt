@@ -10,7 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.systemfailed.rotomdex.ui.theme.WhiteGray
+import com.systemfailed.rotomdex.ui.theme.BlueColorButton
 
 
 @Composable
@@ -21,7 +21,7 @@ fun NewsButton(
     Button(
         onClick = onClick,
         colors = ButtonDefaults.buttonColors(
-            containerColor = MaterialTheme.colorScheme.primary,
+            containerColor = BlueColorButton,
             contentColor = Color.White
         ),
         shape = RoundedCornerShape(size = 6.dp)
@@ -42,8 +42,8 @@ fun NewsTextButton(
     TextButton(onClick = onClick) {
         Text(
             text = text,
-            style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.SemiBold),
-            color = WhiteGray
+            style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Bold),
+            color = BlueColorButton
         )
     }
 }
