@@ -11,13 +11,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.systemfailed.rotomdex.R
 import com.systemfailed.rotomdex.ui.navigation.AppScreens
+import com.systemfailed.rotomdex.ui.theme.DarkBlue
 import kotlinx.coroutines.delay
 
 
@@ -40,7 +40,7 @@ fun Splash() {
         modifier = Modifier
             .fillMaxWidth()
             .fillMaxSize()
-            .background(color = Color.DarkGray),
+            .background(color = DarkBlue),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
