@@ -19,6 +19,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.modifier.modifierLocalMapOf
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.systemfailed.rotomdex.presentation.common.NewsButton
@@ -72,6 +73,9 @@ fun OnBoardingScreen() {
             )
 
             Column(
+                modifier = Modifier
+                    .fillMaxWidth(),
+
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = CenterHorizontally,
             ) {
@@ -90,7 +94,8 @@ fun OnBoardingScreen() {
                 }
                 Spacer(modifier = Modifier.height(25.dp))
 
-                NewsButton(text = buttonState.value[1],
+                NewsButton(
+                    text = buttonState.value[1],
                     onClick = {
                         scope.launch {
                             if (pagerState.currentPage == 3) {

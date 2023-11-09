@@ -12,15 +12,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.view.WindowCompat
 import com.systemfailed.rotomdex.ui.navigation.AppNavigation
 import com.systemfailed.rotomdex.ui.splashscreen.Splash
-import com.systemfailed.rotomdex.ui.theme.RotomdexTheme
+import com.systemfailed.rotomdex.ui.theme.ComposeScreenTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         WindowCompat.setDecorFitsSystemWindows(window, false)
         setContent {
-            RotomdexTheme {
-                // A surface container using the 'background' color from the theme
+            ComposeScreenTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
@@ -28,6 +27,8 @@ class MainActivity : ComponentActivity() {
                     HomeScreen()
                 }
             }
+
+
         }
     }
 }

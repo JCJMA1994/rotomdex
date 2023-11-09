@@ -1,6 +1,7 @@
 package com.systemfailed.rotomdex.presentation.common
 
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -8,6 +9,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
@@ -22,12 +24,13 @@ fun NewsButton(
     onClick: () -> Unit
 ) {
     Button(
+        modifier = Modifier.fillMaxWidth(),
         onClick = onClick,
         colors = ButtonDefaults.buttonColors(
             containerColor = BlueColorButton,
             contentColor = Color.White
         ),
-        shape = RoundedCornerShape(size = 12.dp),
+        shape = RoundedCornerShape(size = 50.dp),
     ) {
         Text(
             text = text,
@@ -44,11 +47,12 @@ fun NewsButton(
 @Composable
 fun NewsTextButton(
     text: String,
-    onClick: () -> Unit
+    onClick: () -> Unit,
 ) {
     OutlinedButton(
+        modifier = Modifier.fillMaxWidth(),
         onClick = onClick,
-        shape = RoundedCornerShape(size = 12.dp),
+        shape = RoundedCornerShape(size = 50.dp),
         border = BorderStroke(width = 2.dp,
             brush = Brush.horizontalGradient(
                 listOf(

@@ -24,6 +24,7 @@ import androidx.compose.ui.unit.sp
 import com.systemfailed.rotomdex.R
 import com.systemfailed.rotomdex.presentation.onboarding.Page
 import com.systemfailed.rotomdex.presentation.onboarding.pages
+import com.systemfailed.rotomdex.ui.theme.dimens
 
 @Composable
 fun OnBoardingPage(
@@ -37,7 +38,8 @@ fun OnBoardingPage(
             modifier = Modifier
                 .fillMaxWidth()
                 .fillMaxHeight(0.5f)
-                .align(Alignment.CenterHorizontally),
+                .align(Alignment.CenterHorizontally)
+                .padding(top = MaterialTheme.dimens.large),
             painter = painterResource(id = page.image),
             contentDescription = null,
             contentScale = ContentScale.Fit,
@@ -56,14 +58,14 @@ fun OnBoardingPage(
             textAlign = TextAlign.Center
         )
 
-        Spacer(modifier = Modifier.height(15.dp))
+        Spacer(modifier = Modifier.height(MaterialTheme.dimens.medium1))
 
         Text(
             text = page.description,
             modifier = Modifier.padding(horizontal = 30.dp),
-            style = MaterialTheme.typography.titleMedium.copy(
+            style = MaterialTheme.typography.labelSmall.copy(
                 fontFamily = FontFamily.Serif,
-                fontSize = 14.sp,
+                fontSize = MaterialTheme.typography.labelSmall.fontSize,
             ),
             color = colorResource(id = R.color.black),
             textAlign = TextAlign.Center
